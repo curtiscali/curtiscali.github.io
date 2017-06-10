@@ -20,6 +20,7 @@
 
         <section class="text-justify">
           {{ post.excerpt | strip_html | markdownify }}
+          <strong> <a href="{{site.baseurl}}{{ post.url }}">more...</a> </strong>
         </section>
 
         <h4><a href="{{site.baseurl}}/blog/">Archive</a></h4>
