@@ -1,236 +1,255 @@
+# --- General options --- #
 
-# Site settings
+# url is the full website URL
+# baseurl is the website's URL without the hostname
 
-# NB! Set your site's url, otherwise stuff will break :)
-
+# If you are building a simple GitHub user page (https://username.github.io) then use these settings:
 url: "https://curtiscali.github.io"
+baseurl: ""
 
-# If you're hosting your site at a Project repository on GitHub pages
-# (https://yourusername.github.io/repository-name)
-# and NOT your user repository (https://yourusername.github.io)
-# then add in the baseurl here, like this: "/repository-name"
-#
-# NB! Without this *nothing* will work, because it's used in every path :)
+# If you are building a GitHub project page then use these settings:
+#url: "http://username.github.io/projectname"
+#baseurl: "/projectname"
 
-baseurl: https://curtiscali.github.io
+# Of course don't forget to change the username and projectname to YOUR username and project
 
-# Google tracking id
+# Name of website
+title: Curtis Cali
 
-google-tracking-id: "UA-100823764-1"
+# Short description of your site
+description: Welcome to my Website!
 
-# Forces https everywhere in your website, except when you serve it locally
-# If you are not hosted on Github Pages, and your host doesn't support https
-# then you should disable it
+# --- Navigation bar options --- #
 
-force-https: True
+# List of links in the navigation bar
+navbar-links:
+  Resume: "resume"
+  #Resources:
+  #  - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
+  #  - Learn markdown: "http://www.markdowntutorial.com/"
+  #  - GitHub Pages: "https://pages.github.com/"
+  #Author's home: "http://deanattali.com"
 
-#############
-# HTML Head #
-#############
+# Image to show in the navigation bar - image must be a square (width = height)
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/img/avatar-icon.png"
 
-lang: "en"
-author: "Curtis Cali"
-title: "{ Curtis Cali }"
-description: "Blog and website of Curtis Cali. All opinions expressed are mine."
-keywords: "cali, curtis, personal, website, timeline, resume, tech, china, global"
-favicon: "/img/favicon.ico"
+# If you want to have an image logo in the top-left corner instead of the title text,
+# then specify the following parameter
+# title-img: /path/to/image
 
-################
-# Header layout #
-################
+# --- Background colour/image options --- #
 
-black-favicon: "/img/black-lab-glass.ico"
+# Personalize the colors in your website. Colour values can be any valid CSS colour
 
-background-img: "../img/intro-bg.png"
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-children-col: "#F5F5F5"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
 
-##############################
-# Dynamic Text on the Header #
-##############################
+# Alternatively, the navbar, footer, and page background can be set to use background images
+# instead of colour
 
-dynamic-typing: True
-shuffle: False # Shuffle the lines.
-loop: True
-loop-count: False # Set False for infinite loop, or set any number for finite loop.
-type-speed: 10
-start-delay: 200
-delete-delay: 5000
-lines: # You can add HTML Tags in the Text
-  - text: "Welcome to my personal site. Enjoy the trip."
-  - text: "Give a Man a Fish, and You Feed Him for a Day. Teach a Man To Fish, and You Feed Him for a Lifetime."
+# navbar-img: "/img/bgimage.png"
+# footer-img: "/img/bgimage.png"
+# page-img: "/img/bgimage.png"
 
-#me-img: "/img/jetpacktocat.png"
+# --- Footer options --- #
 
-# To use facebook profile pic comment the previous line and uncomment the following
-# line, and replace 'user_id' with your facebook user id.
-# Facebook user id can be found by clicking on your profile pic and the large number
-# in the end of the url just before '&type' is your user id.
-# Note: fbid is not the same as user id and user id only contains numbers
+# Change all these values or delete the ones you don't want.
+# Important: you must keep the "name" parameter, everything else you can remove
+author:
+  name: Curtis Cali
 
-# me-img: "https://graph.facebook.com/user_id/picture?type=large&width=500&height=500"
+# Select your active Social Network Links.
+# Uncomment the links you want to show in the footer and add your information to each link.
+# You can reorder the items to define the link order.
+# If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
+social-network-links:
+  rss: true
+  email: "curtiscali@pm.me"
+  # facebook: daattali
+  github: CurtisCali
+#  reddit: yourname
+#  google-plus: +DeanAttali
+  linkedin: curtiscali
+#  xing: yourname
+  stackoverflow: "9791815/curtis-cali"
+#  snapchat: deanat78
+#  instagram: deanat78
+#  youtube: user/deanat78
+#  spotify: yourname
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
 
-# To use github profile pic uncomment the following line and replace 'user_name'
-# with your github user name.
+# Select which share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  google: false
+  linkedin: true
 
-me-img: "https://github.com/curtiscali.png?size=500"
+# How to display the link to the website in the footer
+# Remove this if you don't want a link in the footer
+# url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
 
-# To use gravatar profile pic uncomment the following line and replace 'email_hash'
-# with your gravatar profile email hash.
-# You can create the email hash by using an online tool like 'http://www.md5hashgenerator.com/'
-# just enter your email and it will generate the hash.
+# --- Web Statistics Section --- #
 
-# me-img: "https://www.gravatar.com/avatar/email_hash?s=500"
+# Fill in your Google Analytics gtag.js ID to track your website using gtag
+#gtag: ""
 
-##############################
-# Color the browser elements #
-##############################
-color-browser: "#000000"
-apple-status-bar-style: "black"
+# Fill in your Google Analytics ID to track your website using GA
+#google_analytics: ""
 
-################
-# Web app mode #
-################
+# Google Tag Manager ID
+#gtm: ""
 
-web-app-mode: True
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
 
-# Icons for Web App mode
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
 
-icon-36p: "/img/web-app/icon-36p.png"
-icon-48p: "/img/web-app/icon-48p.png"
-icon-72p: "/img/web-app/icon-72p.png"
-icon-96p: "/img/web-app/icon-96p.png"
-icon-144p: "/img/web-app/icon-144p.png"
-icon-192p: "/img/web-app/icon-192p.png"
+# --- Comments --- #
 
-########
-# Blog #
-########
+# Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
+# disqus: ""
 
-enable-gesture-navigation: True
+# To use Facebook Comments, fill in a Facebook App ID
+# fb_comment_id: ""
 
-#post-preview-words: 48
+# Staticman support
+staticman:
+  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+  branch     : # eg. "master" If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+  endpoint   : # URL of your own deployment (with trailing slash) (will fallback to a public GitLab instance)
+  reCaptcha:
+    # reCaptcha for Staticman (OPTIONAL)
+    # If you use reCaptcha, you must also set these parameters in staticman.yml
+    siteKey  : # Use your own site key, you need to apply for one on Google
+    secret   : # ENCRYPT your password by going to https://staticman3.herokuapp.com/v3/encrypt/<your-site-secret>
 
-excerpt_separator: <!--more-->
+# --- Misc --- #
 
-paginate: 10
+# Facebook App ID
+# fb_app_id: ""
 
-email-share: True
-fb-share: True
-twitter-share: True
-linkedin-share: True
-reddit-share: True
-google-plus-share: True
-tumblr-share: True
-pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 50
 
-disqus-shortname: "curtiscali"
+# Character used to separate site title and description in HTML document title
+# and RSS feed title
+title-separator: "-"
 
-syntax-highlight: True
+# --- Don't need to touch anything below here (but you can if you want) --- #
 
-############
-# Timeline #
-############
+# Output options (more information on Jekyll's site)
+timezone: "America/Vancouver"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
 
-events:
-  - image: "/img/timeline/buzz_lightyear.jpg"
-    date: "To Infinity and Beyond"
-    description: "What the future holds only time will tell, but I look forward to it regardless!"
-  - image: "/img/timeline/graduation.ico"
-    date: "May 2017"
-    description: "Graduated from RIT!"
-  - image: "/img/timeline/cisco.png"
-    date: "May - August 2016"
-    description: "Second internship for Cisco"
-  - image: "/img/timeline/datto.png"
-    date: "June - August 2015"
-    description: "Internship for Datto"
-  - image: "/img/timeline/enernoc.jpg"
-    date: "January - May 2015"
-    description: "Internship for EnerNOC"
-  - image: "/img/timeline/cisco.png"
-    date: "June - August 2014"
-    description: "First internship for Cisco"
-  - image: "/img/timeline/default.png"
-    date: "September 2012"
-    description: "Began attending RIT!"
+kramdown:
+  input: GFM
 
-# First image of the Timeline
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: "" # all files
+    values:
+      layout: "page"
+      show-avatar: true
 
-timeline-img: "/img/timeline/default.png"
+# Use tags index page and make tags on each post clickable
+link-tags: true
 
-###########
-# Contact #
-###########
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Vagrantfile
 
-email: "curtisacali@gmail.com"
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "image"
+        field:
+          element: "text"
+          label: "Image"
+          help: "Add a thumbnail image to your post."
+          placeholder: "Thumbnail"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
 
-################
-# Author Blurb #
-################
-
-# The author blurb goes underneath blog posts.
-# This works best when your author blurb image has a transparent background, or matches your site background color.
-
-# if the author_blurb is not set, then this feature is skipped
-author_blurb: "Curtis Cali is a young software engineer with a degree from RIT. He enjoys all things science, technolgy, and culture."
-author_blurb_image: "/img/author.png"
-
-##################
-# Social Buttons #
-##################
-
-social:
-  - title: "facebook"
-    url: "https://www.facebook.com/profile.php?id=100015720063094"
-  - title: "linkedin"
-    url: "https://www.linkedin.com/in/curtiscali/"
-  - title: "github"
-    url: "https://github.com/curtiscali"
-  #- title: "bitcoin"
-    #url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
-  - title: "rss"
-    url: "/feed.xml"
-
-############
-# 404 page #
-############
-
-err-404-img: "/img/labtocat.png"
-
-##################
-# GPG on Keybase #
-##################
-
-#keybase-username: johnsmith
-#keybase-in-social: True
-#keybase-in-footer: True
-
-################################################################################
-
-# NB! Tread carefully if you want to change the variables below this point!
-
-# Sections shown in the index page
-
-pages_list:
-  About: 'about'
-  Blog: 'latest-post'
-  Timeline: 'timeline'
-  Contact: 'contact'
-
-# Exclusion list from the generated _site
-
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
-
-# Pagination path
-
-paginate_path: "blog/page:num/"
-
-# Enable minification SASS
-
-sass:
-  style: compressed
-
-gems:
+plugins:
   - jekyll-paginate
-  - jemoji
+  - jekyll-sitemap
+
+# Beautiful Jekyll / Dean Attali
+# 2fc73a3a967e97599c9763d05e564189
